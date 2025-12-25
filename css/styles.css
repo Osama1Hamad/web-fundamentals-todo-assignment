@@ -1,0 +1,154 @@
+/* 
+ File: css/styles.css 
+ Student Name: osama hamad
+ Student Id: 12325715
+*/
+
+:root {
+  --bg: #f5f5f8;
+  --card-bg: #ffffff;
+  --text: #222222;
+  --muted: #666666;
+  --brand: #007bff;
+  --brand-dark: #0056b3;
+  --danger: #ff4d4f;
+  --border: #e2e2ea;
+  --radius-lg: 12px;
+  --radius-md: 8px;
+  --shadow-soft: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #eef2ff, #f5f5f8);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  background: var(--card-bg);
+  width: 100%;
+  max-width: 520px;
+  padding: 24px 20px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border);
+}
+
+.app__header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.app__title {
+  margin: 0 0 6px;
+  font-size: 1.5rem;
+}
+
+.app__subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.app__main {
+  margin-top: 8px;
+}
+
+.task-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.task-form__input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.task-form__input:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 1px rgba(0, 123, 255, 0.2);
+}
+
+.task-form__button {
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: var(--brand);
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.task-form__button:hover {
+  background: var(--brand-dark);
+}
+
+.status {
+  min-height: 20px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.task-title {
+  flex: 1;
+  margin-right: 8px;
+  font-size: 0.95rem;
+}
+
+.task-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.task-delete {
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  background: var(--danger);
+  color: #ffffff;
+}
+
+.task-delete:hover {
+  opacity: 0.9;
+}
+
+.app__footer {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
